@@ -1,0 +1,118 @@
+﻿@using System.Collections.Specialized
+@using Rubric = RT.Domain.Models.Rubric
+@model AdvertManager.Models.FakeDbContext
+@{
+    ViewBag.Title = "Commander";
+}
+
+<h2>Rubric</h2>
+@helper SelectView(IEnumerable<RT.Domain.Models.Rubric> items, RT.Domain.Models.Rubric selected)
+{
+    foreach (var item in items)
+    {
+        if (@item.Id == selected.Id)
+        {
+            <option value="@item.Id" selected>@item.Title</option>
+        }
+        else
+        {
+            <option value="@item.Id">@item.Title</option>
+        }
+    }
+}
+
+
+@helper TreeView(IEnumerable<RT.Domain.Models.Rubric> items, string type, string target)
+{
+    foreach (var item in items)
+    {
+        <li>
+            @if (item.HasChild)
+            {
+                <span><i class="icon-folder-open"></i></span>
+                <div class="form-group" style="display: inline-block;">
+                    <label style="display: inline-block;"><input type="@type" name="@target" value="@item.Id" />@item.Title</label>
+                    @Html.ActionLink("Редактировать", "Edit", new { id = item.Id })
+                    @Html.ActionLink("Подробно", "Details", new { id = item.Id })
+                    @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+                </div>
+                <ul>
+                    @TreeView(item.Children, type, target)
+                </ul>
+            }
+            else
+            {
+                <span><i class="glyphicon glyphicon-asterisk"></i></span>
+                <div class="form-group" style="display: inline-block;">
+                    <label style="display: inline-block;"><input type="@type" name="@target" value="@item.Id" />@item.Title</label>
+                    @Html.ActionLink("Редактировать", "Edit", new { id = item.Id })
+                    @Html.ActionLink("Подробно", "Details", new { id = item.Id })
+                    @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+                </div>
+            }
+        </li>
+    }
+}
+@helper ListView(IEnumerable<RT.Domain.Models.Rubric> items, string type, string target)
+{
+    foreach (var item in items)
+    {
+        <li>
+                <span><i class="glyphicon glyphicon-asterisk"></i></span>
+                <div class="form-group" style="display: inline-block;">
+                    <label style="display: inline-block;"><input type="@type" name="@target" value="@item.Id" />@item.Title</label>
+                    @Html.ActionLink("Редактировать", "Edit", new { id = item.Id })
+                    @Html.ActionLink("Подробно", "Details", new { id = item.Id })
+                    @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+                </div>
+        </li>
+    }
+}
+<form id="commanderRoot" style="position:relative; text-align:center; width: 100%;">
+    <div style="text-align: left;" class="panel panel-default row">
+        <div class="tree well col-md-6">
+            <select name="leftRoot" style="width: 100%;" onchange="$.commanderRootSubmit(event)">
+                @SelectView((IEnumerable<Rubric>)ViewData["RootSet"], (Rubric)ViewData["LeftRoot"])
+            </select>
+        </div>
+        <div class="tree well col-md-6">
+            <select name="rightRoot" style="width: 100%;" onchange="$.commanderRootSubmit(event)">
+                @SelectView((IEnumerable<Rubric>)ViewData["RootSet"], (Rubric)ViewData["RightRoot"])
+            </select>
+        </div>
+    </div>
+</form>
+<form style="position:relative; text-align:center; width: 100%; height: 100%; max-height: 100%;">
+    <div style="height: 60%; text-align: left;" class="panel panel-default row">
+        <div class="tree well col-md-6" style="height: 100%; max-height: 100%; overflow: scroll;">
+            <ul>
+                @TreeView(((Rubric)ViewData["LeftRoot"]).Children, "checkbox", "left[]")
+            </ul>
+        </div>
+        <div class="tree well col-md-6" style="height: 100%; max-height: 100%; overflow: scroll;">
+            <ul>
+                @TreeView(((Rubric)ViewData["RightRoot"]).Children, "radio", "right[]")
+            </ul>
+        </div>
+    </div>
+    <div class="panel panel-default row">
+        <div class="tree well col-md-6">
+            <div class="input-group">
+                <label class="input-group-addon"><input name="action" type="radio" value="copy" />copy &gt;</label>
+                <label class="input-group-addon"><input name="action" type="radio" value="move" />move &gt;</label>
+                <label class="input-group-addon"><input name="action" type="radio" value="root" />root &gt;</label>
+                <label class="input-group-addon"><input name="action" type="radio" value="union" />union &gt;</label>
+                <span class="input-group-btn"><input name="submit" type="submit" value="Go!" class="btn" /></span>
+            </div>
+        </div>
+        <div class="tree well col-md-6">
+            <div class="input-group">
+                <label class="input-group-addon"><input name="action" type="radio" value="add" />add &lt;</label>
+                <label class="input-group-addon"><input name="action" type="radio" value="edit" />edit &lt;</label>
+                <label class="input-group-addon"><input name="action" type="radio" value="delete" />delete &lt;</label>
+                <label class="input-group-addon"><input name="action" type="radio" value="split" />split &lt;</label>
+                <span class="input-group-btn"><input name="submit" type="submit" value="Go!" class="btn" /></span>
+            </div>
+        </div>
+    </div>
+</form>

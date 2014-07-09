@@ -1,0 +1,1102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RT.ParsingLibs</name>
+    </assembly>
+    <members>
+        <member name="T:RT.ParsingLibs.Constants">
+            <summary>
+            Константы
+            </summary>
+        </member>
+        <member name="F:RT.ParsingLibs.Constants.CountPublications">
+            <summary>
+            Количество объявлений (CountAD).
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Models.AutomotoAdditionalInfo">
+            <summary>
+                Дополнительная информация для рубрики "Транспортные средства"
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.AutomotoAdditionalInfo.ToString">
+            <summary>
+                Преобразовать в строку
+            </summary>
+            <returns>Объект в виде строки</returns>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Vin">
+            <summary>
+                VIN
+                Идентификатор транспортного средства
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Condition">
+            <summary>
+                Состояние транспортного средства
+                Новый
+                С пробегом
+                Битый
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.MadeIn">
+            <summary>
+                Cтрана производства
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.ImportFrom">
+            <summary>
+                Cтрана импорта
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.AutomotoType">
+            <summary>
+                Тип транспортного средства
+                легковой автомобиль
+                коммерческий транспорт
+                прицеп
+                внедорожник
+                мотоцикл
+                мопед
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Year">
+            <summary>
+                Год выпуска
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.OdometerValue">
+            <summary>
+                Пробег по одометру
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.GearboxType">
+            <summary>
+                Тип коробки передач
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.TransmissionType">
+            <summary>
+                Тип привода
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SuspensionType">
+            <summary>
+                Тип подвески
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Capacity">
+            <summary>
+                Грузоподъёмность
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.CurbWeight">
+            <summary>
+                Масса в снаряжённом состоянии
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.GearsNumber">
+            <summary>
+                Количество передач
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.AxlesNumber">
+            <summary>
+                Количество осей
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SeatsNumber">
+            <summary>
+                Количество сидений
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.DoorsNumber">
+            <summary>
+                Количество дверей
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SafetyIndex">
+            <summary>
+                Индекс безопасности
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Customs">
+            <summary>
+                Таможня
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SteeringWheel">
+            <summary>
+                Расположение руля
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.FuelType">
+            <summary>
+                Тип топлива
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Clearance">
+            <summary>
+                Клиренс
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.FuelConsumption">
+            <summary>
+                Расход топлива на 100 км
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.MileageOnATank">
+            <summary>
+                Пробег на одном баке топлива
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.AccelerationUpTo100">
+            <summary>
+                Время разгона до 100 км/ч
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.MaximumSpeed">
+            <summary>
+                Максимальная скорость
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.PreviousOwners">
+            <summary>
+                Количество предыдущих владельцев
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.CostAll">
+            <summary>
+                Цена за транспортное средство
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.RequiresRepair">
+            <summary>
+                Требуется ремонт
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Tuning">
+            <summary>
+                Наличие тюнинга
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.InEscrow">
+            <summary>
+                В залоге
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.UnderWarranty">
+            <summary>
+                На гарантии
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.DiskSize">
+            <summary>
+                Размер дисков
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.DiskBrand">
+            <summary>
+                Брэнд дисков
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.DiskType">
+            <summary>
+                Тип дисков
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.TiresSize">
+            <summary>
+                Размер установленного комплекта шин
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.TiresBrand">
+            <summary>
+                Брэнд установленного комплекта шин
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.AdditionalDisks">
+            <summary>
+                Дополнительный комплект дисков
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.AdditionalTires">
+            <summary>
+                Дополнительный комплект шин
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Xenon">
+            <summary>
+                Наличие ксеноновых фар
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Led">
+            <summary>
+                Наличие светодиодных фар
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.FogLights">
+            <summary>
+                Противотуманные фары
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.FogBackLights">
+            <summary>
+                Противотуманные фонари
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Spotlight">
+            <summary>
+                Прожектор
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Conditioner">
+            <summary>
+                Кондиционер
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.ClimateControl">
+            <summary>
+                Климат-контроль
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.ClimateNumber">
+            <summary>
+                Количество зон климат-контроля
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Abs">
+            <summary>
+                Наличие ABS
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Airbags">
+            <summary>
+                Наличие подушек безопасности
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.AirbagsNumber">
+            <summary>
+                Количество подушек безопасности
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.TintedWindows">
+            <summary>
+                Тонированные стекла
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SecuritySystem">
+            <summary>
+                Охранная система
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.CentralLocking">
+            <summary>
+                Центральный замок
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Immobilizer">
+            <summary>
+                Иммобилайзер
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.HeatedMirrors">
+            <summary>
+                Обогрев зеркал
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.OnboardComputer">
+            <summary>
+                Бортовой компьютер
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.RainSensor">
+            <summary>
+                Датчик дождя
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.LightSensor">
+            <summary>
+                Датчик света
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.CruiseControl">
+            <summary>
+                Круиз-контроль
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SportMode">
+            <summary>
+                Спортивный режим
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.PowerSteering">
+            <summary>
+                Усилитель руля
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SeatHeating">
+            <summary>
+                Обогрев сидений
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.PowerMirrors">
+            <summary>
+                Электропривод зеркал
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.PowerWindows">
+            <summary>
+                Стеклоподъемники
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.AdjustableSteeringWheel">
+            <summary>
+                Регулировка руля
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.AutomaticSeatAdjustment">
+            <summary>
+                Автоматическая регулировка сидений
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Dtc">
+            <summary>
+                Антипробуксовка
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.StabilityControl">
+            <summary>
+                Курсовая стабилизация
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Parktronic">
+            <summary>
+                Парктроник
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.NavigationSystem">
+            <summary>
+                Навигационная система
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.RemoteControl">
+            <summary>
+                Дистанционный запуск двигателя
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.RacingSteeringWheel">
+            <summary>
+                Спортивный руль
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Winch">
+            <summary>
+                Лебёдка
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Kangaroo">
+            <summary>
+                Кенгурятник
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Sunroof">
+            <summary>
+                Люк
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.PanoramicRoof">
+            <summary>
+                Панорамная крыша
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.ConvertibleTop">
+            <summary>
+                Откидной верх
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Hitch">
+            <summary>
+                Фаркоп
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.CrankcaseHeater">
+            <summary>
+                Подогрев масла в картере
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Wc">
+            <summary>
+                Санузел
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Kitchen">
+            <summary>
+                Кухня
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SleepsNumber">
+            <summary>
+                Количество спальных мест
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.RadioReceiver">
+            <summary>
+                Радиоприёмник
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.TvReceiver">
+            <summary>
+                Телеприёмник
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SatelliteReceiver">
+            <summary>
+                Спутниковая тарелка
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.CassettePlayer">
+            <summary>
+                Кассетный плеер
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.СdPlayer">
+            <summary>
+                CD плеер
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Mp3Player">
+            <summary>
+                MP3 плеер
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.DvdPlayer">
+            <summary>
+                DVD плеер
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.VideoPlayer">
+            <summary>
+                Видео плеер
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Brand">
+            <summary>
+                Брэнд производителя
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Model">
+            <summary>
+                Марка/модель транспортного средства
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Generation">
+            <summary>
+                Поколение модели транспортного средства
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Modification">
+            <summary>
+                Модификация модели транспортного средства
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.InteriorMaterial">
+            <summary>
+                Обивка салона
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.InteriorColor">
+            <summary>
+                Цвет салона
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SeatsMaterial">
+            <summary>
+                Обивка салона
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.SeatsColor">
+            <summary>
+                Цвет салона
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.BodyType">
+            <summary>
+                Тип кузова
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.BodySize">
+            <summary>
+                Размер кузова
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.BodyColor">
+            <summary>
+                Цвет кузова
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.EngineType">
+            <summary>
+                Тип двигателя
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.EngineModel">
+            <summary>
+                Модель двигателя
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.EnginePower">
+            <summary>
+                Мощность двигателя
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.EngineVolume">
+            <summary>
+                Объём двигателя
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.PositionOfCylinders">
+            <summary>
+                Расположение цилиндров
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.BattaryVoltage">
+            <summary>
+                Напряжение питания
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.BattaryPolarity">
+            <summary>
+                Полярность батареи
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.CargoVolume">
+            <summary>
+                Объём багажника
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.CargoType">
+            <summary>
+                Тип багажника
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.CargoLift">
+            <summary>
+                Грузовой лифт
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.Crane">
+            <summary>
+                Кран
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.DesignatedDisabled">
+            <summary>
+                Места для инвалидов
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AutomotoAdditionalInfo.LiftForDisabled">
+            <summary>
+                Лифт для инвалидов
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Models.NamespaceDoc">
+            <summary>
+            <see cref="N:RT.ParsingLibs.Models"/> пространство содержит базовые модели для парсеров
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.NamespaceDoc">
+            <summary>
+            <see cref="N:RT.ParsingLibs"/> пространство содержит базовые классы всех парсеров
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.IParsingModuleMetadata">
+            <summary>
+            Метаданные модуля парсера
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.IParsingModuleMetadata.Name">
+            <summary>
+            Имя парсера
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.IParsingModule">
+            <summary>
+            Интерфейс модуля парсера
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.IParsingModule.About">
+            <summary>
+            Получить информацию о разработчике
+            </summary>
+            <returns>Информация о разработчике</returns>
+        </member>
+        <member name="M:RT.ParsingLibs.IParsingModule.Sources(RT.ParsingLibs.Models.Bind)">
+            <summary>
+            Получить названия ресурсов, обрабатываемая библиотекой
+            </summary>
+            <param name="bind">Бинд запроса</param>
+            <returns> Коллекция названий ресурсов (сайтов)</returns>
+        </member>
+        <member name="M:RT.ParsingLibs.IParsingModule.KeysRubrics">
+            <summary>
+            Получить список ИД рубрик, обрабатываемая библиотекой
+            </summary>
+            <returns>Коллекция ИД рубрик</returns>
+        </member>
+        <member name="M:RT.ParsingLibs.IParsingModule.KeysRegions">
+            <summary>
+            Получить список ИД регионов, обрабатываемая библиотекой
+            </summary>
+            <returns>Коллекция ИД регионов</returns>
+        </member>
+        <member name="M:RT.ParsingLibs.IParsingModule.KeysActions">
+            <summary>
+            Получить список ИД действий, обрабатываемая библиотекой
+            </summary>
+            <returns>Коллекция ИД действий</returns>
+        </member>
+        <member name="M:RT.ParsingLibs.IParsingModule.Result(RT.ParsingLibs.Requests.ParseRequest)">
+            <summary>
+            Задача на парсинг
+            </summary>
+            <param name="request">Запрос на парсинг</param>
+            <returns>Ответ от парсера (awaitable Task!)</returns>
+        </member>
+        <member name="T:RT.ParsingLibs.Models.AdditionalInfo">
+            <summary>
+            Дополнительная информация специфичная для каждой рубрики
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.AdditionalInfo.ToString">
+            <summary>
+            Преобразовать в строку
+            </summary>
+            <returns>Объект в виде строки</returns>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AdditionalInfo.RealtyAdditionalInfo">
+            <summary>
+            Дополнительная информация для рубрики "Недвижимость"
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.AdditionalInfo.AutomotoAdditionalInfo">
+            <summary>
+            Дополнительная информация для рубрики "Транспортные средства"
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Models.Bind">
+            <summary>
+            Бинд (тройка ИД рубрика-регион-действие)
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.Bind.#ctor">
+            <summary>
+            Конструктор по умолчанию
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.Bind.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="rubricId">ИД рубрики</param>
+            <param name="actionId">ИД действия</param>
+            <param name="regionId">ИД региона</param>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.Bind.ToString">
+            <summary>
+            Преобразовать в строку
+            </summary>
+            <returns>Объект в виде строки</returns>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.Bind.Equals(System.Object)">
+            <summary>
+            Метод сравнения объектов
+            </summary>
+            <param name="obj">Сравниваемый объект</param>
+            <returns>TRUE - в случае равенства объектов, иначе FALSE</returns>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.Bind.Equals(RT.ParsingLibs.Models.Bind)">
+            <summary>
+            Метод сравнения объектов
+            </summary>
+            <param name="p">Сравниваемый объект</param>
+            <returns>TRUE - в случае равенства объектов, иначе FALSE</returns>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.Bind.GetHashCode">
+            <summary>
+            Получить хэш-код
+            </summary>
+            <returns>Хэш-код</returns>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.Bind.RubricId">
+            <summary>
+            ИД рубрики
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.Bind.RegionId">
+            <summary>
+            ИД региона
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.Bind.ActionId">
+            <summary>
+            ИД действия
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Models.ParseResponseCode">
+            <summary>
+            Код результата работы
+            </summary>
+        </member>
+        <member name="F:RT.ParsingLibs.Models.ParseResponseCode.Success">
+            <summary>
+            Успешная обработка
+            </summary>
+        </member>
+        <member name="F:RT.ParsingLibs.Models.ParseResponseCode.BanResource">
+            <summary>
+            Бан сайта
+            </summary>
+        </member>
+        <member name="F:RT.ParsingLibs.Models.ParseResponseCode.ContentChage">
+            <summary>
+            Изменение структуры контента
+            </summary>
+        </member>
+        <member name="F:RT.ParsingLibs.Models.ParseResponseCode.ContentEmpty">
+            <summary>
+            Сайт вернул пустой контент
+            </summary>
+        </member>
+        <member name="F:RT.ParsingLibs.Models.ParseResponseCode.NotAvailableResource">
+            <summary>
+            Сайт не отвечает
+            </summary>
+        </member>
+        <member name="F:RT.ParsingLibs.Models.ParseResponseCode.NotFoundId">
+            <summary>
+            В выборке не найден ID или DataTime или Хеш-MD5 последнего объявления
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Models.RealtyAdditionalInfo">
+            <summary>
+            Дополнительная информация для рубрики "Недвижимость"
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.RealtyAdditionalInfo.ToString">
+            <summary>
+            Преобразовать в строку
+            </summary>
+            <returns>Объект в виде строки</returns>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.FloorNumber">
+            <summary>
+            Количество этажей
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.Floor">
+            <summary>
+            Этаж
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.RoomNumber">
+            <summary>
+            Количество комнат
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.RealEstateType">
+            <summary>
+            Тип недвижимости 
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.District">
+            <summary>
+            Район
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.Address">
+            <summary>
+            Адрес
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.WallМaterial">
+            <summary>
+            Материал стен
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.Furnish">
+            <summary>
+            Отделка
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.TotalSpace">
+            <summary>
+            Общая площадь
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.LivingSpace">
+            <summary>
+            Жилая площадь
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.KitchenSpace">
+            <summary>
+            Площадь кухни
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.CostAll">
+            <summary>
+            Цена за весь объект
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.CostPerMeter">
+            <summary>
+            Цена за метр
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.IsLoggia">
+            <summary>
+            Балкон/лоджия
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.Wc">
+            <summary>
+            Санузел
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.ViewFromProperty">
+            <summary>
+            Вид из окон
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.IsParking">
+            <summary>
+            Паркинг во дворе или доме
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.Tenancy">
+            <summary>
+            Срок аренды
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.LeasableSpace">
+            <summary>
+            Сдаваемая площадь
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.AppointmentOfRoom">
+            <summary>
+            Назначение помещения
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.RealtyAdditionalInfo.LandSpace">
+            <summary>
+            Площадь участка, соток
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Models.WebPublication">
+            <summary>
+            Объявление
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.WebPublication.ToString">
+            <summary>
+            Преобразовать в строку
+            </summary>
+            <returns>Объект в виде строки</returns>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.PublicationId">
+            <summary>
+            ИД объявления в данной рубрике-регионе-дествии
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.ModifyDate">
+            <summary>
+            Дата создания/изменения объявления
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.RubricId">
+            <summary>
+            ИД рубрики
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.RegionId">
+            <summary>
+            ИД региона
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.ActionId">
+            <summary>
+            ИД действия
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.Url">
+            <summary>
+            Ссылка на объявление
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.Site">
+            <summary>
+            Ссылка на сайт
+            </summary> 
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.Description">
+            <summary>
+            Текст объявления
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.Contact">
+            <summary>
+            Контакт объявления
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.Photos">
+            <summary>
+            Url на изображения
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublication.AdditionalInfo">
+            <summary>
+            Дополнительная информация специфичная для каждой рубрики
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Models.WebPublicationContact">
+            <summary>
+            Контактная информация объявления
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.Models.WebPublicationContact.ToString">
+            <summary>
+            Преобразовать в строку
+            </summary>
+            <returns>Объект в виде строки</returns>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublicationContact.Author">
+            <summary>
+            Автор (Юр. лицо, агентство, собственник)
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublicationContact.AuthorUrl">
+            <summary>
+            Url-автора
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublicationContact.ContactName">
+            <summary>
+            Контактное лицо 
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublicationContact.Phone">
+            <summary>
+            Телефоны
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublicationContact.Email">
+            <summary>
+            Email-адреса
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublicationContact.Skype">
+            <summary>
+            Логин скайпа
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Models.WebPublicationContact.Icq">
+            <summary>
+            ICQ-номер
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Requests.NamespaceDoc">
+            <summary>
+            <see cref="N:RT.ParsingLibs.Requests"/> пространство содержит запросы к парсерам
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Requests.ParseRequest">
+            <summary>
+            Запрос на парсинг
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Requests.ParseRequest.RubricId">
+            <summary>
+            ИД рубрики
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Requests.ParseRequest.RegionId">
+            <summary>
+            ИД региона
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Requests.ParseRequest.ActionId">
+            <summary>
+            ИД действия
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Requests.ParseRequest.LastPublicationId">
+            <summary>
+            ИД последнего объявления в данной рубрике-регионе-дествии
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Responses.AboutResponse">
+            <summary>
+            Информация от разработчика
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.Responses.AboutResponse.ToString">
+            <summary>
+            Преобразовать в строку
+            </summary>
+            <returns>Объект в виде строки</returns>
+        </member>
+        <member name="P:RT.ParsingLibs.Responses.AboutResponse.Info">
+            <summary>
+            Информация от разработчика
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Responses.AboutResponse.Contacts">
+            <summary>
+            Координаты разработчика
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Responses.AboutResponse.CopyRight">
+            <summary>
+            Информация о передаче исключительных прав
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Responses.NamespaceDoc">
+            <summary>
+            <see cref="N:RT.ParsingLibs.Responses"/> пространство содержит ответы от парсеров
+            </summary>
+        </member>
+        <member name="T:RT.ParsingLibs.Responses.ParseResponse">
+            <summary>
+            Ответ от парсера
+            </summary>
+        </member>
+        <member name="M:RT.ParsingLibs.Responses.ParseResponse.ToString">
+            <summary>
+            Преобразовать в строку
+            </summary>
+            <returns>Объект в виде строки</returns>
+        </member>
+        <member name="P:RT.ParsingLibs.Responses.ParseResponse.ResponseCode">
+            <summary>
+            Код ответа
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Responses.ParseResponse.ModuleName">
+            <summary>
+            Имя модуля
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Responses.ParseResponse.LastPublicationId">
+            <summary>
+            ИД последнего объявления в данной рубрике-регионе-дествии
+            </summary>
+        </member>
+        <member name="P:RT.ParsingLibs.Responses.ParseResponse.Publications">
+            <summary>
+            Объявления
+            </summary>
+        </member>
+    </members>
+</doc>

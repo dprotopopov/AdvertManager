@@ -1,0 +1,76 @@
+﻿@using System.Collections.Specialized
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – приложение ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/bootstrap-tree-master/bootstrap-combined.min.css")
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+    @Scripts.Render("~/bootstrap-tree-master/js/bootstrap-tree.js")
+
+    @Scripts.Render("~/jqueryElement/jquery.backgroundImageElement.js")
+    @Scripts.Render("~/jqueryElement/jquery.centerElementContent.js")
+    @Scripts.Render("~/jqueryElement/jquery.fullScreenElement.js")
+    @Scripts.Render("~/jqueryElement/jquery.topMenuElement.js")
+    @Scripts.Render("~/jqueryElement/jquery.rowElementChildren.js")
+    @Scripts.Render("~/jqueryElement/jquery.windowBorderElement.js")
+    @Scripts.Render("~/jqueryElement/jquery.browserDetect.js")
+    @Scripts.Render("~/jqueryElement/slabtexted.js")
+
+    @Styles.Render("~/jqueryElement/jquery.centerElementContent.css")
+    @Styles.Render("~/jqueryElement/jquery.windowBorderElement.css")
+    @Styles.Render("~/jqueryElement/jquery.rowElementChildren.css")
+    @Styles.Render("~/jqueryElement/jquery.backgroundImageElement.css")
+
+    @Scripts.Render("~/js/commander.js")
+    @Scripts.Render("~/js/children.js")
+
+
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div class="full-screen-element">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("AdvertManager", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                        @*<li>@Html.ActionLink("О программе", "About", "Home")</li>
+            <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>*@
+                        <li>@Html.ActionLink("Actions", "Commander", "Actions")</li>
+                        <li>@Html.ActionLink("Rubrics", "Commander", "Rubrics")</li>
+                        <li>@Html.ActionLink("Regions", "Commander", "Regions")</li>
+                        <li>@Html.ActionLink("Repair database", "Index", "Fake")</li>
+                    </ul>
+                    @*@Html.Partial("_LoginPartial")*@
+                </div>
+            </div>
+        </div>
+        <div style="position:absolute;text-align:center;top:0; left:0; right:0; bottom:120px; ">
+            <div class="container body-content" style="position:relative; text-align:center;width:100%;height: 100%; ">
+                @RenderBody()
+            </div>
+        </div>
+        <div class="container body-content bottom-border-element">
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

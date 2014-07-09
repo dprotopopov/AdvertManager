@@ -1,0 +1,5 @@
+D:\MYFILES\RERDAN\SVN\CODE\RT.TestingLibs\RT.ParsingLibs\bin\x86\Debug\RT.ParsingLibs.dll
+D:\MYFILES\RERDAN\SVN\CODE\RT.TestingLibs\RT.ParsingLibs\bin\x86\Debug\RT.ParsingLibs.pdb
+D:\MYFILES\RERDAN\SVN\CODE\RT.TestingLibs\RT.ParsingLibs\bin\x86\Debug\RT.ParsingLibs.XML
+D:\MYFILES\RERDAN\SVN\CODE\RT.TestingLibs\RT.ParsingLibs\obj\x86\Debug\RT.ParsingLibs.dll
+D:\MYFILES\RERDAN\SVN\CODE\RT.TestingLibs\RT.ParsingLibs\obj\x86\Debug\RT.ParsingLibs.pdb

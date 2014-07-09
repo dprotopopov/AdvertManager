@@ -1,0 +1,161 @@
+﻿@using Microsoft.Ajax.Utilities
+@model RT.Domain.Models.Rubric
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Rubric</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ParentId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.ParentId, new SelectList(Model.RubricDbSet, "Id", "Title"), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ParentId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ModifyDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ModifyDate, new { Value = Model.ModifyDate.ToString("yyyy-MM-dd HH:mm"), @class = "form-control input-sm", @data_provide = "datepicker" })
+                @Html.ValidationMessageFor(model => model.ModifyDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Level, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Level, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Level, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HasChild, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.HasChild)
+                    @Html.ValidationMessageFor(model => model.HasChild, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IdPath, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.IdPath, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IdPath, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    if (Model.Id != 0)
+    {
+        <div id="children" style="height: 100%; max-height: 100%;">
+            <div style="height: 100%; max-height: 100%; overflow: scroll;">
+                <table class="table">
+                    <tr>
+                        <th>
+                            <input type="checkbox" name="checkbox" onclick="$.checkChildren(event)" />
+                        </th>
+                        <th>
+                            Цена
+                        </th>
+                        <th>
+                            Комментарий
+                        </th>
+                        <th>
+                            Автор
+                        </th>
+                        <th>
+                            Дата изменения
+                        </th>
+                    </tr>
+
+                    @{ int index = 0; }
+                    @foreach (var item in Model.Costs)
+                    {
+                        <tr class="child">
+                            <td>
+                                <input type="hidden" name="Id[@index]" value="@item.Id.ToString()" />
+                                <input type="hidden" name="RubricId[@index]" value="@item.RubricId.ToString()" />
+                                <input type="checkbox" name="checkbox[@index]" onclick="$.checkChildren(event)" />
+                            </td>
+                            <td>
+                                <input type="text" name="Cost[@index]" value="@item.Cost.ToString()" />
+                            </td>
+                            <td>
+                                <textarea name="Comment[@index]">@item.Comment.ToString()</textarea>
+                            </td>
+                            <td>
+                                <input type="text" name="Author[@index]" value="@item.Author.ToString()" />
+                            </td>
+                            <td>
+                                <input type="datetime" name="ModifyDate[@index]" value="@{ DateTime.Parse(item.ModifyDate.ToString()).ToString("s"); }" />
+                            </td>
+                        </tr>
+                        index++; 
+                    }
+                    <tr class="childTemplate" style="visibility: hidden;">
+                        <td>
+                            <input type="hidden" name="Id" value="0" />
+                            <input type="hidden" name="RubricId" value="@Model.Id.ToString()" />
+                            <input type="checkbox" name="checkbox" onclick="$.checkChildren(event)" />
+                        </td>
+                        <td>
+                            <input type="text" name="Cost" value="" />
+                        </td>
+                        <td>
+                            <textarea name="Comment"></textarea>
+                        </td>
+                        <td>
+                            <input type="text" name="Author" value="" />
+                        </td>
+                        <td>
+                            <input type="datetime" name="ModifyDate" value="@DateTime.Now.ToString("s")" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="input-group">
+                <input type="hidden" name="childrenCount" value="@index" />
+                <label class="input-group-addon"><input name="action" type="radio" value="add" />add &lt;</label>
+                <label class="input-group-addon"><input name="action" type="radio" value="remove" />remove &gt;</label>
+                <span class="input-group-btn"><a href="#" id="childrenSubmit" class="btn btn-default" onclick="$.childrenSubmit(event)">Go!</a></span>
+            </div>
+        </div>
+    }
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Сохранить" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Вернутся в список", "Commander")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

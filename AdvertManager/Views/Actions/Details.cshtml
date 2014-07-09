@@ -1,0 +1,42 @@
+﻿@model RT.Domain.Models.Action
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Action</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AntiActionId)
+        </dt>
+
+        <dd>
+            @Html.DropDownListFor(model => model.AntiActionId, new SelectList(Model.ActionDbSet, "Id", "Title"), new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyDate)
+        </dt>
+
+        <dd>
+           @Html.DisplayFor(model => model.ModifyDate, "_DateTime")
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Вернутся в список", "Commander")
+</p>
